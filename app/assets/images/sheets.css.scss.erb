@@ -1,0 +1,129 @@
+// Place all the styles related to the sheets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+header{
+	height:38px;
+	width:100%;
+	margin:0 0 10px 0;
+	clear:both;
+}
+header h2{
+	float:left;
+}
+header .logout{
+	height:38px;
+	line-height:75px;
+	display:-moz-box;
+}
+#content {
+	position:relative;
+   height:90%;   
+   width:100%;
+   margin-top:65px;
+   margin-left:190px;
+}
+
+.header{
+  	top:0px;
+  	position:fixed;
+  	margin-right:0px;
+  	height:90px;
+  	width:100%;
+	left:0px;
+  	border:1px solid;
+	padding:0.5em;
+  	background-color:#fff;
+   	z-index:1;
+}
+
+#sheet {
+  width:2000px;
+  height:1800px;
+  border:solid;
+  position:relative;
+  background:#0f0;
+  z-index:0;
+  background:#fff; 
+
+}
+#line-sheet{
+  width:2000px;
+  height:1800px;
+  border:solid;
+  position:absolute;
+  z-index:10;  
+}
+.menu {
+ top:110px;
+ height:100%;
+ width:180px;
+ position:fixed;
+ float:left;
+ left:0px;
+ padding:0.5em;
+ border:1px solid;
+ z-index:1;
+ background:#fff;
+}
+path{z-index:10}
+.note {
+	background-color:white;
+	position:absolute;
+	border:solid;
+	z-index:0;
+	display:block;
+}
+.text {
+	margin:0px;
+	top:1px;
+	clear:both;
+}
+.edit{
+	visibility:hidden;
+	float:left;
+
+	display:block;
+	font-size:14pt;
+}
+#dialog{
+	visibility:hidden;
+}
+.side-note {
+	border:1px solid;
+	margin-bottom:2px;
+}
+.footer{
+	clear:both;
+	position:fixed;
+	bottom:0px;
+	padding: 0;
+	text-align:right;
+	display:block;
+	/* height:3%; */
+	 width:100%;
+}
+
+div.hct {
+	background-image: url(<%=asset_path("greybutton.png")%>);
+	position: absolute;
+	width: 48px;
+	height: 34px;
+	font-size: 10px;
+	text-align: center;
+	padding-top: 14px;
+	display: none;
+	cursor: pointer;
+}
+
+div.hct:hover {
+	background-image: url(<%=asset_path("greyhighlight.png")%>);
+}
+
+#hpt {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	display: none;
+	background: 000;
+	opacity: 0;
+}

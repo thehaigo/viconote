@@ -1,0 +1,9 @@
+
+<% notes.each do |note| %>
+	<div class="note" id="note<%= note.note_num -%>" >
+   		<article id="text<%= note.note_num -%>"class="text">
+			<%=raw note.body if note.body %>
+		</article>
+		<p class="title" ><%= note.title %></p>
+	</div>
+<% end%>

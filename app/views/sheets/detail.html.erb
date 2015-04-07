@@ -1,0 +1,34 @@
+<%= javascript_include_tag("detail")%>
+<div class="show">
+<header >
+  <h2 class="viconote">ViCoNote:<%= @sheet.title %></h2>
+  <div class="title" id="sheet<%= @sheet.id -%>"></div>  
+</header>
+
+<nav>
+	<ul>
+		<li>Menu </li>
+		<li><%= button_to 'Back', sheets_path,:class => "button",:method => "get"%></li>
+		<li><button id="start">Start</button></li>
+		<li><button id="next">Next</button></li>
+	</ul>
+</nav>
+
+<div id="main">
+	<div id="map">
+		<% @notes.each do |note|%>
+			<div class="mnote" id="mnote<%= note.note_num -%>" >
+			</div>
+		<%end%>
+		<div id="map-view">	</div>
+	</div>
+	<button id="map-hidden">-</button>
+	<div id="sheet" class="canvas">
+		<div id="paper-div"></div>
+   		<%= render "notes",:notes => @notes %>
+	</div>
+
+</div>
+<div id="authenticity_token"><%= form_authenticity_token %></div>
+</div>
+</div>

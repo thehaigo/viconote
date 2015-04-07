@@ -1,0 +1,35 @@
+<%= javascript_include_tag("sheets")%>
+<div class="show">
+<header>
+  <h2 class="viconote">ViCoNote</h2>
+</header>
+<nav>
+	<%= link_to 'New Sheet', new_sheet_path %>
+	<span class="logout">
+		<% if user_signed_in? %>
+		  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+		<% end %>
+	</span>
+
+</nav>
+<article class="index-main">
+<% @sheets.each do |sheet| %>
+	<div class="index-sheet" id="sheet<%= sheet.id%>">
+		<%= sheet.title%>
+		<ul class="enote_ul">
+			<li class="enote_li"><%= link_to 'Show', sheet %></li>	
+			<li class="enote_li"><%= link_to 'Edit', edit_sheet_path(sheet) %></li>
+			<li class="enote_li"><%= link_to 'Destroy', sheet, :confirm => 'Are you sure?', :method => :delete %></li>	
+		</ul>
+		<br>
+		<div class="map" id="map<%= sheet.id -%>">
+			<% sheet.notes.each do |note|%>
+				<div class="mnote" id="snote<%=sheet.id-%><%=note.note_num -%>" >
+				</div>
+			<%end%>	
+		</div>
+	</div>
+<%end%>
+</article>
+
+</div>

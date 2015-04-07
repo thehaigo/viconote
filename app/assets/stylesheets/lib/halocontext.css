@@ -1,0 +1,24 @@
+div.hct{
+	background-color:gray;
+	border-radius:16px;
+    position:absolute;
+    width:48px; height:34px;
+    font-size:10px;
+    text-align:center;
+    margin:0; 
+	padding:14px 0 0 0;
+	display:none;
+	cursor:pointer;
+}    
+
+div.hct:hover{
+	background-color:darkgray;
+}
+
+#hpt{
+	position:absolute;
+	width:10px; height:10px;
+	display:none;
+	background:000;
+	opacity:0;
+}

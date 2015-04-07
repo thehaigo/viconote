@@ -1,0 +1,163 @@
+// Place all the styles related to the sheets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+header{
+	height:38px;
+	width:100%;
+	margin:0 0 10px 0;
+	clear:both;
+}
+header h2{
+	float:left;
+}
+header .logout{
+	height:38px;
+	line-height:75px;
+	display:-moz-box;
+}
+*/
+header{
+
+	border:1px solid;
+	top:0px;
+	margin:0;
+	padding:0;
+	width:100%;
+	height:70px;
+}
+header h2,h3{
+	margin:1px;
+	padding:1px;
+}
+
+
+nav{
+
+	margin:0;
+	padding:0;
+	width:100%;
+	height:20px;
+	border:1px solid;
+}
+nav ul{
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+nav li{
+	float:left;
+	height:20px;
+	list-style:none;
+	text-align:center;
+	
+}
+.enote_ul{
+ 	margin:0px;
+	padding:0px;
+	list-style-type:none;	
+}
+.enote_li{
+	float:left;
+	height:20px;
+	list-style:none;
+	text-align:center;
+	
+}
+.note_ul{
+	float:left;
+	margin:5px;
+}
+#split{
+	width:100%;
+}
+aside{
+	border:1px solid;
+	margin:0;
+	padding:0;
+	width:150px;
+	height:750px;
+	float:left;
+	overflow-y:scroll;
+}
+.notebooks {
+	border:1px solid;
+	padding:0.5em;
+}
+.enote{
+	visibility:hidden;
+}
+.note_title{
+	background-color:#ff8c00;
+	border:0.5px solid;
+	margin:0;
+}
+.note_body{
+	border-bottom:0.5px solid;
+	border-left:0.5px solid;
+	border-right:0.5px solid;
+	margin-top:0;
+}
+#main{
+
+	padding:0;
+	width:200px;
+	height:750px;
+	border:1px solid;
+	float:right;
+	overflow:scroll;
+}
+
+
+#sheet {
+  width:4000px;
+  height:3000px;
+
+  position:relative;
+  background:#0f0;
+  z-index:0;
+  background:#fff; 
+}
+
+
+.note {
+	background-color:white;
+	position:absolute;
+	border:solid;
+	z-index:0;
+	display:block;
+	overflow:hidden;
+}
+.title{
+	display:none;
+}
+.text {
+	margin:0px;
+	top:1px;
+	clear:both;
+}
+.edit{
+	visibility:hidden;
+	float:left;
+	display:block;
+	font-size:14pt;
+}
+
+#dialog{
+	visibility:hidden;
+}
+.side-note {
+	border:1px solid;
+	margin-bottom:2px;
+}
+
+.footer{
+	clear:both;
+	position:fixed;
+	bottom:0px;
+	padding: 0;
+	text-align:right;
+	display:block;
+	 width:100%;
+}
+

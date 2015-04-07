@@ -1,0 +1,224 @@
+/*common*/
+.show header{
+	border:1px solid;
+	top:0px;
+	padding:0;
+	width:100%;
+	height:70px;
+	background-color:#0000cd;
+}
+
+.show header .viconote{
+	margin:10px;
+	padding:0px;
+	color:white;
+}
+
+.show nav{
+
+	padding:0;
+	width:100%;
+	height:40px;
+	border:1px solid;
+}
+.show nav ul{
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+.show nav li{
+	margin-top:5px;
+	margin-left:10px;
+	float:left;
+	height:20px;
+	list-style:none;
+	text-align:center;
+	
+}
+
+.enote_ul{
+ 	margin:0px;
+	padding:0px;
+	list-style-type:none;	
+}
+.enote_li{
+	float:left;
+	height:20px;
+	list-style:none;
+	text-align:center;
+}
+.note_ul{
+	float:left;
+	margin:5px;
+}
+
+.smap {
+	margin:5px;
+	width:300px;
+	height:225px;
+	border:solid 1px;
+	position:relative;
+	display:block;
+	background:#eaeaea;
+	clear:both;
+}
+
+.side-note {
+	border:1px solid;
+	margin-bottom:2px;
+}
+
+/*index*/
+.index-main{
+	margin:10px;
+	padding:0px;
+	
+}
+.index-sheet {
+	float:left;
+	border:1px solid;
+	margin:2px;
+	height:290px;
+	width:320px;
+}
+
+/*show*/
+
+
+#main{
+	padding:0;
+	border:1px solid;
+	overflow:scroll;
+	z-index:0;
+}
+
+#map {
+	margin-right:0px;
+	right:30px;
+	width:300px;
+	height:225px;
+	border:solid 1px;
+	position:fixed;
+	z-index:10;
+	background:#eaeaea;
+}
+.map {
+	margin:5px;
+	width:300px;
+	height:225px;
+	border:solid 1px;
+	position:relative;
+	display:block;
+	background:#eaeaea;
+	clear:both;
+}
+
+
+#map-hidden{
+	margin-right:0px;
+	right:30px;
+	position:fixed;
+	z-index:40;
+}
+#map-view{
+	opacity:0.7;
+	background:white;
+	width:100px;
+	height:80px;
+	border:solid 1px;
+	z-index:30;
+	position:relative;
+	cursor:move;
+}
+#sheet {
+  width:4000px;
+  height:3000px;
+  position:relative;
+  background:#0f0;
+  z-index:0;
+  background:#fff; 
+}
+
+.note {
+	background-color:white;
+	position:absolute;
+	border:solid;
+	z-index:0;
+	display:block;
+	overflow:hidden;
+	padding:0.2em;
+	cursor:pointer;
+}
+.edit_note{
+	background-color:white;
+	position:absolute;
+	border:none;
+	z-index:0;
+	display:block;
+	overflow:hidden;
+	padding:0.2em;
+}
+.mnote {
+	background-color:white;
+	position:absolute;
+	border:solid;
+	z-index:0;
+	display:block;
+	overflow:hidden;
+	padding:0.2em;
+}
+
+.title{
+	display:none;
+}
+.text {
+	margin:0px;
+	top:1px;
+	clear:both;
+}
+.edit{
+	visibility:hidden;
+	float:left;
+	display:block;
+	font-size:14pt;
+}
+
+#dialog{
+	visibility:hidden;
+}
+#upload{
+	visibility:hidden;
+}
+#share_form{
+	visibility:hidden;
+}
+
+.side-sheet {
+	border:1px solid;
+	margin-bottom:2px;
+	height:285px;
+	width:320px;
+}
+
+.side-ssheet {
+	border:1px solid;
+	margin-bottom:2px;
+
+	width:320px;
+}
+.hidden_body{
+	display:none;
+}
+.footer{
+	clear:both;
+	position:fixed;
+	bottom:0px;
+	padding: 0;
+	text-align:right;
+	display:block;
+	 width:100%;
+}
+#authenticity_token{
+	visibility:hidden;
+}
+

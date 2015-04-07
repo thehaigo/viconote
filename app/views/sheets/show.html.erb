@@ -1,0 +1,75 @@
+<%= javascript_include_tag("sheets")%>
+<div class="show">
+<header >
+  <h2 class="viconote">ViCoNote:<%= @sheet.title %></h2>
+  <div class="title" id="sheet<%= @sheet.id -%>"></div>  
+</header>
+
+<nav>
+	<ul>
+		<li>Menu </li>
+		<li><%= button_to 'Back', sheets_path,:class => "button",:method => "get"%></li>
+		<li><button id="json_upload" class="button">ファイル取り込み</button></li>
+		<li><%= button_to "データファイルダウンロード",{:action => "json_download",:id=> @sheet.id},:class => "button",:method => "get"%></li>
+		<li class="logout">
+			<% if user_signed_in? %>
+			  <%= button_to "Sign out",destroy_user_session_path,:method => :delete,:class => "button"%>
+			<% end %>
+		</li>
+	</ul>
+	<div id="upload">
+		<%= form_tag({:controller=>"sheets",:action=>"json_upload"},{:multipart => true}) do %>
+			<%= hidden_field_tag :sheet_id,@sheet.id%>
+			<%= file_field_tag "f",:accept => 'application/json' %>
+			<%= submit_tag("保存")%>
+		<% end %>
+	</div>
+</nav>
+
+
+<div id="main">
+	<div id="map">
+		<% @notes.each do |note|%>
+			<div class="mnote" id="mnote<%= note.note_num -%>" >
+			</div>
+		<%end%>
+		<div id="map-view">	</div>
+	</div>
+	<button id="map-hidden">-</button>
+	<div id="sheet" class="canvas">
+		<div id="paper-div"></div>
+   		<%= render "notes",:notes => @notes %>
+	</div>
+	<div id="dialog" class="edit">
+		<%= hidden_field_tag "note_id"%>
+		<%= hidden_field_tag "sheet_id",@sheet.id%>
+		<%= hidden_field_tag "mode","edit"%>
+		<div class="field">
+			<table border="0" cellspacing="5" cellpadding="5">
+				<tr>
+					<th><%= label_tag "Title"%></th>
+					<th><%= label_tag "Background Color"%></th>
+					<th><%= label_tag "Font Size"%></th>
+					<th><%= label_tag "Font Color"%></th>
+					<th><%= label_tag "Text Align"%></th>	
+				</tr>
+				<tr>
+					<td><%= text_field_tag "note_title"%></td>
+					<td><%= text_field_tag "background_color"%></td>
+					<td><%= text_field_tag "font_size" %></td>
+					<td><%= text_field_tag "font_color"%></td>
+					<td><%= text_field_tag "text_align"%></td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="field">
+			<%= label_tag "body"%><br>
+			<%= text_area_tag "note_body",nil,:rows => 5, :cols => 100 ,:class => "note_body"%>
+		</div>
+
+	</div>
+</div>
+<div id="authenticity_token"><%= form_authenticity_token %></div>
+</div>
+</div>
