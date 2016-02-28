@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20141210055353) do
 
-  create_table "lines", force: true do |t|
+  create_table "lines", force: :cascade do |t|
     t.string   "title"
     t.integer  "note_id"
     t.integer  "connected_id"
@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(version: 20141210055353) do
     t.datetime "updated_at"
   end
 
-  create_table "logs", force: true do |t|
+  create_table "logs", force: :cascade do |t|
     t.text     "text"
     t.integer  "sheet_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "notes", force: true do |t|
+  create_table "notes", force: :cascade do |t|
     t.integer  "note_num",   default: 1
     t.string   "title"
     t.text     "body"
@@ -49,14 +49,14 @@ ActiveRecord::Schema.define(version: 20141210055353) do
     t.datetime "updated_at"
   end
 
-  create_table "sheets", force: true do |t|
+  create_table "sheets", force: :cascade do |t|
     t.string   "title"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
